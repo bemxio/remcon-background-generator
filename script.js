@@ -11,9 +11,6 @@ let image = new Image();
 
 image.src = "image.png";
 
-let imageWidth = Math.floor(image.width / 1.2);
-let imageHeight = Math.floor(image.height * 2);
-
 // functions
 const hexToRgb = (color) => {
     const values = [];
@@ -49,18 +46,26 @@ const colorImage = (image, color) => {
 };
 
 const main = () => {
+    // debugging constants just in case they are inaccessible
     console.log("Background color: " + BACKGROUND_COLOR);
     console.log("Image color: " + IMAGE_COLOR);
     console.log("Rotation: " + ROTATION);
 
+    // fill background
     ctx.fillStyle = BACKGROUND_COLOR;
-    ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // get image dimensions
+    const imageWidth = Math.floor(image.width / 1.2);
+    const imageHeight = Math.floor(image.height * 2);
+
+    let rows = canvas.width / imageWidth;
+    let columns = canvas.height / imageHeight;
+    
+    // change color of image
     image = colorImage(image, IMAGE_COLOR);
 
-    let rows = canvas.clientWidth / imageWidth;
-    let columns = canvas.clientHeight / imageHeight;
-    
+    // draw image
     for (let x = 0; x < rows; x++) {
         for (let y = 0; y < columns; y++) {
             ctx.save();
@@ -77,6 +82,7 @@ const main = () => {
         }
     }
 
+    // redirect to image
     window.location = canvas.toDataURL("image/png");
 };
 

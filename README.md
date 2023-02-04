@@ -1,7 +1,5 @@
 **Jeśli nie umiesz, albo wolisz przeczytać te README po polsku, możesz przeczytać tłumaczenie [tutaj](https://github.com/bemxio/remcon-background-generator/blob/main/README.pl.md).**
 
-<br/>
-
 # remcon-background-generator
 A little script made in JavaScript (and HTML, for the template), that generates a background image for the [Remcon 2023](https://remcon.pl) identificator, based on a given image that is used as a pattern.
 

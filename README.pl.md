@@ -1,7 +1,5 @@
 **If you somehow landed here despite not knowing Polish, you can read the English version of this README [here](https://github.com/bemxio/remcon-background-generator/blob/main/README.md).**
 
-<br/>
-
 # remcon-background-generator
 Mały skrypt wykonany w JavaScript (i HTML, dla szablonu), który generuje obrazek dla identyfikatora na [Remcon 2023](https://remcon.pl), na podstawie danego obrazu, który jest używany jako wzór.
 

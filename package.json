@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/bemxio/remcon-background-generator/issues"
   },
-  "homepage": "https://github.com/bemxio/remcon-background-generator#readme"
+  "homepage": "https://github.com/bemxio/remcon-background-generator#readme",
+  "dependencies": {
+    "canvas": "^2.11.0",
+    "color": "^4.2.3",
+    "minimist": "^1.2.7"
+  }
 }
